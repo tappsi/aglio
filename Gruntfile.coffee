@@ -43,6 +43,14 @@ module.exports = (grunt) ->
                         serviceName: 'travis-ci'
                 src: 'test-js/**/*.js'
 
+        aglio:
+            your_target:
+              files:
+                "dest/api.html": ["INSERT THE PATH HERE"]
+              options:
+                theme: "kaiten"
+
+    grunt.loadNpmTasks('grunt-aglio');
     grunt.loadNpmTasks 'grunt-coffeelint'
     grunt.loadNpmTasks 'grunt-contrib-coffee'
     grunt.loadNpmTasks 'grunt-mocha-cov'
